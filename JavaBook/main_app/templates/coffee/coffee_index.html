@@ -3,15 +3,15 @@
 
 <h1>Coffee List</h1>
 
-{% for finch in finches %}
-<a href="{% url 'detail' finch.id %}">
+{% for coffee in coffee %}
+<a href="{% url 'coffee_detail' coffee.id %}">
   <div class="card">
     <!-- Add this single line below -->    
       <div class="card-content">
         <span class="card-title">Name</span>
-        <p>Roast</p>
-        <p>Rating</p>
-        <p>Tasting Notes</p>
+        <p>Roast: {{coffee.roast}}</p>
+        <p>Rating: {{coffee.rating}}</p>
+        <p>Tasting Notes: {{coffee.tastingNotes}}</p>
       </div>
   </div>
 </a>
