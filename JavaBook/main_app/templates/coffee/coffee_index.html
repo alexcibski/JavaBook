@@ -3,8 +3,8 @@
 
 <h1>Coffee List</h1>
 
-
-<a href="">
+{% for finch in finches %}
+<a href="{% url 'detail' finch.id %}">
   <div class="card">
     <!-- Add this single line below -->    
       <div class="card-content">

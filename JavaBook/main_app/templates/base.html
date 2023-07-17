@@ -7,33 +7,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cat Collector</title>
+    <title>JavaBook</title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Poppins&display=swap" rel="stylesheet">  -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <!-- Part 4 add materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function(){
+      $('.sidenav').sidenav();
+    });
+    </script> -->
+    
 </head>
 
-<body>
+<body class="brown lighten-5">
     <header class="navbar-fixed">
-        <nav>
+        <nav class="brown lighten-1">
             <div class="nav-wrapper">
                 <ul>
                     <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;JavaBook</a></li>
                 </ul>
-                <ul class="right">
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
                     <li><a href="">About</a></li>
                     <li><a href="">Add</a></li>
                     <li><a href="">View</a></li>
-                </ul>
-            </div>
+                </ul>            
+            </div>      
         </nav>
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="">About</a></li>
+            <li><a href="">Add</a></li>
+            <li><a href="">View</a></li>
+        </ul>
     </header>
+
     <main class="container">
         {% block content %}
         {% endblock %}
     </main>
-    <footer class="page-footer">
-        <div class="right">All Rights Reserved, &copy; 2023 JavaBook &nbsp;</div>
+
+    <footer class="page-footer brown lighten-1">
+        <div class="container">
+            <div class="row">
+                <div class="center">All Rights Reserved, &copy; 2023 JavaBook &nbsp;</div>
+            </div>
+        </div>
     </footer>
+
 </body>
 
 </html>

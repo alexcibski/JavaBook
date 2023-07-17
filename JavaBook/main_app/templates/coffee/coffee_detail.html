@@ -1,45 +1,7 @@
-<!-- {% extends 'base.html' %}
-{% block content %} -->
+{% extends 'base.html' %}
+{% block content %}
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>JavaBook</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Poppins&display=swap" rel="stylesheet"> 
-
-    <link rel="stylesheet" href="../style.css">
-
-         
-</head>
-
-<body class="brown lighten-5">
-  <header class="navbar-fixed">
-    <nav class="brown lighten-1">
-        <div class="nav-wrapper">
-            <ul>
-                <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;JavaBook</a></li>
-            </ul>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
-            <ul class="right hide-on-med-and-down">
-                <li><a href="">About</a></li>
-                <li><a href="">Add</a></li>
-                <li><a href="">View</a></li>
-            </ul>            
-        </div>      
-    </nav>
-    <ul class="sidenav" id="mobile-demo">
-      <li><a href="">About</a></li>
-      <li><a href="">Add</a></li>
-      <li><a href="">View</a></li>
-    </ul
-</header>
 
 <h1>Coffee Details</h1>
 
@@ -80,23 +42,11 @@
   </div>
 </div>
 
-<main class="container">
-  <!-- {% block content %}
-  {% endblock %} -->
-</main>
-</body>
-<footer class="page-footer brown lighten-1">
-  <div class="container">
-    <div class="row">
-      <div class="center">All Rights Reserved, &copy; 2023 JavaBook &nbsp;</div>
-    </div>
-  </div>
-</footer>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">
-  $(document).ready(function(){
-    $('.sidenav').sidenav();
-  });
+<script>
+
+
 </script>
+
+
 </html>
-<!-- {% endblock %} -->
+{% endblock %}
