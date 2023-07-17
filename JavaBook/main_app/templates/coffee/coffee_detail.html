@@ -35,8 +35,8 @@
             <p>Brew Tips: {{coffee.brewTips}}</p>              
         </div>      
       <div class="card-action grey lighten-5">
-        <a href="{% url 'coffee_update' %}">Edit</a>
-        <a href="{% url 'coffee_delete' %}">Delete</a>
+        <a href="{% url 'coffee_update' coffee.id %}">Edit</a>
+        <a href="{% url 'coffee_delete' coffee.id %}">Delete</a>
       </div>
     </div>        
   </div>
