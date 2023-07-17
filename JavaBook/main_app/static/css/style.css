@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+nav {
+  font-family: 'Fascinate', cursive;
+}
+
+main {
+  flex: 1 0 auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+footer.page-footer {
+  padding-top: 0;
+  text-align: center;
+  font-family: 'Fascinate', cursive;
+}
+
