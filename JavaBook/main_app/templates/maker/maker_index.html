@@ -3,8 +3,8 @@
 
 <h1>Coffee Maker List</h1>
 
-{% for finch in finches %}
-<a href="{% url 'detail' finch.id %}">
+{% for maker in makers %}
+<a href="{% url 'maker_detail' maker.id %}">
   <div class="card">
     <!-- Add this single line below -->    
       <div class="card-content">
