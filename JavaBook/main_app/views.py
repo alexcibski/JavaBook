@@ -2,25 +2,6 @@ from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Coffee, Maker
 
-coffee = [{
-    'name': 'Test',
-    'brand': 'StarBucks',
-    'roast': 'dark',
-    'countryOfOrigin': 'Mexico',
-    'tastingNotes': 'test',
-    'rating': 4,
-    'review': 'testing review',
-    'brewTips': 'brewtips test',
-}]
-
-maker = [{
-    'name': 'Test',
-    'brand': 'Keurig',
-    'rating': 6,
-    'description': 'test description of maker',
-    'review': 'test review of maker',
-    'brewTips': 'test brewtips',
-}]
 
 
 # Home page

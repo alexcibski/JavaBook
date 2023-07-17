@@ -15,7 +15,7 @@ class Coffee(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'coffee_id': self.id})
+        return reverse('coffee_detail', kwargs={'coffee_id': self.id})
     
 class Maker(models.Model):
     name = models.CharField(max_length=100)
@@ -29,4 +29,4 @@ class Maker(models.Model):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('detail', kwargs={'maker_id': self.id})
+        return reverse('maker_detail', kwargs={'maker_id': self.id})
