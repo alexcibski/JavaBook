@@ -16,18 +16,17 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <!-- Part 4 add materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- <script type="text/javascript" src="js/materialize.min.js"></script>
     <script>
-      $(document).ready(function(){
-      $('.sidenav').sidenav();
-    });
-    </script> -->
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, { edge: 'right' });
+        });
+    </script>
     
 </head>
 
 <body class="brown lighten-5">
-    <header class="navbar-fixed">
+    <header>
         <nav class="brown lighten-1">
             <div class="nav-wrapper">
                 <ul>
