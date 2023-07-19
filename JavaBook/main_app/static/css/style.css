@@ -19,3 +19,6 @@ footer.page-footer {
   font-family: 'Fascinate', cursive;
 }
 
+.dropdown-trigger {
+  outline: none;
+}

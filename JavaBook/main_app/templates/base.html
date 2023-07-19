@@ -18,8 +18,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, { edge: 'right' });
+            const elems = document.querySelectorAll('.sidenav');
+            const instances = M.Sidenav.init(elems, { edge: 'right' });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const viewDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(viewDropdown, {
+                coverTrigger: false,
+                hover: true
+            });
         });
     </script>
     
@@ -35,10 +42,20 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'coffee_create' %}">Add Coffee</a></li>
-                    <li><a href="{% url 'coffee_index' %}">View Coffee</a></li>
-                    <li><a href="{% url 'maker_create' %}">Add Maker</a></li>
-                    <li><a href="{% url 'maker_index' %}">View Maker</a></li>
+                    <li>
+                        <a class="dropdown-trigger" href="#!" data-target="view-dropdown">View</a>
+                            <ul id="view-dropdown" class="dropdown-content">
+                                <li><a href="{% url 'coffee_index' %}">View Coffee</a></li>
+                                <li><a href="{% url 'maker_index' %}">View Maker</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-trigger" href="#!" data-target="add-dropdown">Add</a>
+                            <ul id="add-dropdown" class="dropdown-content">
+                                <li><a href="{% url 'coffee_create' %}">Add Coffee</a></li>
+                                <li><a href="{% url 'maker_create' %}">Add Maker</a></li>
+                            </ul>
+                    </li>
                 </ul>            
             </div>      
         </nav>
