@@ -4,12 +4,13 @@ from django.urls import reverse
 class Coffee(models.Model):
     name = models.CharField(max_length=100)
     brand = models.CharField(max_length=100)
-    roast = models.CharField(max_length=100)
-    countryOfOrigin = models.CharField(max_length=100)
-    tastingNotes = models.CharField(max_length=100)
-    rating = models.IntegerField()
-    review = models.TextField(max_length=250)
-    brewTips = models.TextField(max_length=250)
+    roast = models.CharField(max_length=100, blank=True)
+    countryOfOrigin = models.CharField(max_length=100, blank=True)
+    tastingNotes = models.CharField(max_length=100, blank=True)
+    rating = models.PositiveIntegerField()
+    review = models.TextField(max_length=250, blank=True)
+    brewTips = models.TextField(max_length=250, blank=True)
+    image = models.ImageField(blank=True)
 
     def __str__(self):
         return self.name
@@ -20,10 +21,11 @@ class Coffee(models.Model):
 class Maker(models.Model):
     name = models.CharField(max_length=100)
     brand = models.CharField(max_length=100)
-    rating = models.IntegerField()
-    description = models.TextField()
-    review = models.TextField()
-    brewTips = models.TextField()
+    rating = models.PositiveIntegerField()
+    description = models.TextField(blank=True)
+    review = models.TextField(blank=True)
+    brewTips = models.TextField(blank=True)
+    image = models.ImageField(blank=True)
 
     def __str__(self):
         return self.name
