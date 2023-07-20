@@ -10,7 +10,7 @@ class Coffee(models.Model):
     rating = models.PositiveIntegerField()
     review = models.TextField(max_length=250, blank=True)
     brewTips = models.TextField(max_length=250, blank=True)
-    image = models.ImageField(blank=True)
+    image = models.URLField(max_length=300, blank=True)
 
     def __str__(self):
         return self.name
@@ -25,7 +25,7 @@ class Maker(models.Model):
     description = models.TextField(blank=True)
     review = models.TextField(blank=True)
     brewTips = models.TextField(blank=True)
-    image = models.ImageField(blank=True)
+    image = models.URLField(max_length=300, blank=True)
 
     def __str__(self):
         return self.name

@@ -12,8 +12,7 @@
         <span class="card-title" style="font-family: 'Fascinate', cursive;">Picture</span>
           <!-- Responsive Images
           To make images resize responsively to page width, you can add the class responsive-img to your image tag. it will now have a max-width: 100% and height: auto.-->
-          <img class="responsive-img" src="cool_pic.jpg">
-          <p>Picture</p>              
+          <img class="responsive-img" src="{{coffee.image}}">
       </div>
     </div>
   </div>
@@ -28,8 +27,7 @@
           <p>Country of Origin: {{coffee.countryOfOrigin}}</p>
           <p>Tasting Notes: {{coffee.notes}}</p>
           <p>Rating: {{coffee.rating}}</p>   
-          <p>Review: {{coffee.review}}</p>
-          <p>Img: {{coffee.image}} </p>    
+          <p>Review: {{coffee.review}}</p> 
       </div>
         <div class="card-content grey lighten-5">
           <span class="card-title" style="font-family: 'Fascinate', cursive;">Brew Tips</span>
