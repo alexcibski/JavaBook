@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1>Coffee List</h1>
+<h1 style="font-family: 'Fascinate', cursive;">Coffee List</h1>
 
 {% for coffee in coffee %}
 <a href="{% url 'coffee_detail' coffee.id %}">
   <div class="card">
     <!-- Add this single line below -->    
-      <div class="card-content">
+      <div class="card-content black-text" style="font-family: 'Poppins', sans-serif;">
         <span class="card-title">Name</span>
         <p>Roast: {{coffee.roast}}</p>
         <p>Rating: {{coffee.rating}}</p>
