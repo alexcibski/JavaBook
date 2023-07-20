@@ -11,43 +11,66 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Poppins&display=swap" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Poppins&display=swap" rel="stylesheet"> 
 
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
     <!-- Part 4 add materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems, { edge: 'right' });
+            const elems = document.querySelectorAll('.sidenav');
+            const instances = M.Sidenav.init(elems, { edge: 'right' });
+
+            const viewDropdown = document.querySelectorAll('.dropdown-trigger');
+            M.Dropdown.init(viewDropdown, {
+                coverTrigger: false,
+                hover: true
+            });
         });
     </script>
-    
+    <style>
+        #bg{
+          background-size: 1800px;
+          background-size: cover;
+          background-position: center;
+          background-image: url('{% static "img/JavaBook-2.png" %}');
+        }
+    </style>
 </head>
 
-<body class="brown lighten-5">
+<body class="brown lighten-5" id="bg">
     <header>
         <nav class="brown lighten-1">
-            <div class="nav-wrapper">
+            <div class="nav-wrapper" style="font-family: 'Poppins', sans-serif;">
                 <ul>
-                    <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;JavaBook</a></li>
+                    <li><a href="{% url 'home' %}" class="left brand-logo" style="font-family: 'Fascinate', cursive;">&nbsp;&nbsp;JavaBook&nbsp;&nbsp;</a></li>
                 </ul>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'coffee_create' %}">Add Coffee</a></li>
-                    <li><a href="{% url 'coffee_index' %}">View Coffee</a></li>
-                    <li><a href="{% url 'maker_create' %}">Add Maker</a></li>
-                    <li><a href="{% url 'maker_index' %}">View Maker</a></li>
+                    <li>
+                        <a class="dropdown-trigger" href="#!" data-target="view-dropdown">View</a>
+                            <ul id="view-dropdown" class="dropdown-content">
+                                <li><a class="brown-text" href="{% url 'coffee_index' %}">View Coffee</a></li>
+                                <li><a class="brown-text" href="{% url 'maker_index' %}">View Maker</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a class="dropdown-trigger" href="#!" data-target="add-dropdown">Add</a>
+                            <ul id="add-dropdown" class="dropdown-content">
+                                <li><a class="brown-text" href="{% url 'coffee_create' %}">Add Coffee</a></li>
+                                <li><a class="brown-text" href="{% url 'maker_create' %}">Add Maker</a></li>
+                            </ul>
+                    </li>
                 </ul>            
             </div>      
         </nav>
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="{% url 'about' %}">About</a></li>
-            <li><a href="{% url 'coffee_create' %}">Add Coffee</a></li>
-            <li><a href="{% url 'coffee_index' %}">View Coffee</a></li>
-            <li><a href="{% url 'maker_create' %}">Add Maker</a></li>
-            <li><a href="{% url 'maker_index' %}">View Maker</a></li>
+            <li><a class="brown-text" href="{% url 'about' %}">About</a></li>
+            <li><a class="brown-text" href="{% url 'coffee_index' %}">View Coffee</a></li>
+            <li><a class="brown-text" href="{% url 'maker_index' %}">View Maker</a></li>
+            <li><a class="brown-text" href="{% url 'coffee_create' %}">Add Coffee</a></li>
+            <li><a class="brown-text" href="{% url 'maker_create' %}">Add Maker</a></li>
         </ul>
     </header>
 
@@ -59,7 +82,7 @@
     <footer class="page-footer brown lighten-1">
         <div class="container">
             <div class="row">
-                <div class="center">All Rights Reserved, &copy; 2023 JavaBook &nbsp;</div>
+                <div class="center" style="font-family: 'Poppins', sans-serif;">All Rights Reserved, &copy; 2023 JavaBook &nbsp;</div>
             </div>
         </div>
     </footer>

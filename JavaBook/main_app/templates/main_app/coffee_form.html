@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<div class="col s12 m6 l6">
+  <div class="card">
+      <div class="card-content black-text" style="font-family: 'Poppins', sans-serif;">
 
+    
 {% if object %}
-  <h1>Edit <span class="teal-text"></span></h1>
+  <h1 style="font-family: 'Fascinate', cursive;">Edit</h1>
 {% else %}
-  <h1>Add Coffee</h1>
+  <h1 style="font-family: 'Fascinate', cursive;">Add Coffee</h1>
 {% endif %}
   
   <!-- leaving the action empty makes the form post to the same url used to display it -->
@@ -16,7 +20,18 @@
     <!-- render the inputs inside of <tr>s & </tr>s -->
     {{ form.as_table }}
     </table>
-    <input type="submit" value="Submit!" class="btn">
+    <input type="submit" value="Submit!" class="btn brown lighten-1">
   </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  const selectEl = document.getElementById('{{form.rating.auto_id}}');
+  M.FormSelect.init(selectEl);
+  const selectEls = 
+document.getElementById('{{form.roast.auto_id}}');
+  M.FormSelect.init(selectEls);
+</script>
 
 {% endblock %}

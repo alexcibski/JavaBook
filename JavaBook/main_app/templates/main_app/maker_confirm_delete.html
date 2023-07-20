@@ -1,15 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="col s12 m6 l6">
+  <div class="card">
+      <div class="card-content">
+  <h1 style="font-family: 'Fascinate', cursive;">Delete Coffee Maker</h1>
 
-  <h1>Delete Coffee Maker</h1>
-
-  <h4>Are you sure you want to delete <span class="teal-text">Coffee Maker</span>?</h4>
+  <h4>Are you sure you want to delete <span class="brown-text lighten-5">{{ object.name }}</span>?</h4>
 
   <form action="" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Yes - Delete!" class="btn">
-    <a href="{% url 'maker_detail' maker.id %}">Cancel</a>
+    <input type="submit" value="Yes - Delete!" class="btn brown lighten-1">
+    <a class="btn brown lighten-1" href="{% url 'maker_detail' maker.id %}">Cancel</a>
   </form>
-
+</div>
+</div>
+</div>
 
 {% endblock %}
