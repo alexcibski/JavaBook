@@ -20,8 +20,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const elems = document.querySelectorAll('.sidenav');
             const instances = M.Sidenav.init(elems, { edge: 'right' });
-        });
-        document.addEventListener('DOMContentLoaded', function() {
+
             const viewDropdown = document.querySelectorAll('.dropdown-trigger');
             M.Dropdown.init(viewDropdown, {
                 coverTrigger: false,
@@ -34,11 +33,12 @@
           background-size: 1800px;
           background-size: cover;
           background-position: center;
+          background-image: url('{% static "img/JavaBook-2.png" %}');
         }
     </style>
 </head>
 
-<body class="brown lighten-5" id="bg" style="background-image: url('{% static "img/JavaBook-2.png"%}');">
+<body class="brown lighten-5" id="bg">
     <header>
         <nav class="brown lighten-1">
             <div class="nav-wrapper" style="font-family: 'Poppins', sans-serif;">
