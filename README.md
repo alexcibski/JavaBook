@@ -1,6 +1,6 @@
 # JavaBook
 
-- Pitch deck, ScreenShot of App, ERD, and Wireframes
+- Pitch deck, ERD, and Wireframes
 https://docs.google.com/presentation/d/19I668nh9xD0B0C1_JiWhTaSTv9IVfFA5NxcylsVHbZA/edit?usp=sharing
 
 - Trello board
@@ -8,6 +8,13 @@ https://trello.com/b/HGikWkjX/javabook
 
 - Link to site hosted on Heroku
 https://java-book-a57dc0cae3ed.herokuapp.com/
+
+![Homepage](/staticfiles/homepage.png)
+![About](/staticfiles/aboutpage.png)
+![Coffee Index](/staticfiles/coffeeindexpage.png)
+![Coffee Detail](/staticfiles/coffeedetailpage.png)
+![Coffee Form](/staticfiles/addcoffeepage.png)
+
 
 ## Technologies Used
 
