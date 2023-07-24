@@ -1,18 +1,16 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
-
-<h1 style="font-family: 'Fascinate', cursive;">Coffee Maker Details</h1>
+<h1 class="grey lighten-5 z-depth-3 detail-index">Coffee Maker Details</h1>
 
 <div class="row">
   <div class="col s12 m6 l6">
     <div class="card z-depth-3">
       <div class="card-content grey lighten-5">
-        <span class="card-title" style="font-family: 'Fascinate', cursive;">Picture</span>
-          <!-- Responsive Images
-          To make images resize responsively to page width, you can add the class responsive-img to your image tag. it will now have a max-width: 100% and height: auto.-->
-          <img class="responsive-img" src="{{maker.image}}">
+        <span class="card-title fascinate">Picture</span>
+        <!-- Responsive Images
+        To make images resize responsively to page width, you can add the class responsive-img to your image tag. it will now have a max-width: 100% and height: auto.-->
+        <img class="responsive-img" src="{{maker.image}}">
       </div>
     </div>
   </div>
@@ -20,16 +18,16 @@
   <div class="col s12 m6 l6">
     <div class="card z-depth-3">
       <div class="card-content grey lighten-5">
-        <span class="card-title" style="font-family: 'Fascinate', cursive;">Coffee Maker</span>
-          <p>Name: {{maker.name}}</p>
-          <p>Brand: {{maker.brand}}</p>
-          <p>Description: {{maker.description}}</p>
-          <p>Rating: {{maker.rating}}</p>   
-          <p>Review: {{maker.review}}</p>    
+        <span class="card-title fascinate">Coffee Maker</span>
+        <p>Name: {{maker.name}}</p>
+        <p>Brand: {{maker.brand}}</p>
+        <p>Description: {{maker.description}}</p>
+        <p>Rating: {{maker.rating}}</p>   
+        <p>Review: {{maker.review}}</p>    
       </div>
         <div class="card-content grey lighten-5">
-          <span class="card-title" style="font-family: 'Fascinate', cursive;">Brew Tips</span>
-            <p>Brew Tips: {{maker.brewTips}}</p>              
+          <span class="card-title fascinate">Brew Tips</span>
+          <p>Brew Tips: {{maker.brewTips}}</p>              
         </div>      
       <div class="card-action grey lighten-5">
         <a class="btn brown lighten-1" href="{% url 'maker_update' maker.id %}">Edit</a>
@@ -38,12 +36,6 @@
     </div>        
   </div>
 </div>
-
-<script>
-
-
-</script>
-
 
 </html>
 {% endblock %}
